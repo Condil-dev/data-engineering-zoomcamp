@@ -1,0 +1,19 @@
+services:
+  pgdatabase:
+    image: postgres:13
+    ports: 
+    - "5432:5432"
+    environment:
+    - POSTGRES_USER=broot 
+    - POSTGRES_PASSWORD=broot 
+    - POSTGRES_DB=ny_taxi 
+    volumes:
+    - "./ny_taxi_data:/var/lib/postgresql/data:rw"
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+    - "8080:80"
+    environment:
+    - PGADMIN_DEFAULT_EMAIL=admin@admin.com 
+    - PGADMIN_DEFAULT_PASSWORD=broot 
+
