@@ -32,7 +32,7 @@ python3 ingest_data.py \
 
 docker build -t taxi_ingest:v001 .
 
-URL=http://172.19.0.1:8000/yellow_tripdata_2021-01.parquet
+URL=http://ipaddress/yellow_tripdata_2021-01.parquet
 
 sudo docker run -it \
 --network=pg-network \
